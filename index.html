@@ -252,20 +252,18 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
 <div class="login-screen" id="loginScreen">
   <div class="login-logo">🌱</div>
   <div class="login-title">컬러풀 스쿨</div>
-  <div class="login-sub">우리 팀 자생식물 관찰일지 🌸</div>
+  <div class="login-sub">자생식물 관찰일지 🌸</div>
   <div class="login-card">
     <div class="school-tag">🏫 송례중학교</div>
-    <div class="login-step-label"><span class="login-step-num">1</span> 우리 팀 이름을 적어주세요</div>
-    <input type="text" class="name-input" id="loginTeam" placeholder="예) 초록탐험대" maxlength="16" oninput="checkLoginReady()" />
-    <div class="login-step-label"><span class="login-step-num">2</span> 내 이름도 적어주세요</div>
-    <input type="text" class="name-input" id="loginName" placeholder="예) 김하늘" maxlength="12" oninput="checkLoginReady()" onkeydown="if(event.key==='Enter')enterApp()" />
-    <div class="login-step-label"><span class="login-step-num">3</span> 어떤 식물을 관찰할까요?</div>
+    <div class="login-step-label"><span class="login-step-num">1</span> 이름을 적어주세요</div>
+    <input type="text" class="name-input" id="loginName" maxlength="12" oninput="checkLoginReady()" onkeydown="if(event.key==='Enter')enterApp()" />
+    <div class="login-step-label"><span class="login-step-num">2</span> 어떤 식물을 관찰할까요?</div>
     <div class="plant-picker">
       <div class="plant-pick" data-p="꿀풀" onclick="pickPlant('꿀풀')"><span class="pp-emoji">💜</span><span class="pp-name">꿀풀</span></div>
       <div class="plant-pick" data-p="구절초" onclick="pickPlant('구절초')"><span class="pp-emoji">🌼</span><span class="pp-name">구절초</span></div>
       <div class="plant-pick" data-p="층꽃나무" onclick="pickPlant('층꽃나무')"><span class="pp-emoji">🌿</span><span class="pp-name">층꽃나무</span></div>
     </div>
-    <button class="btn-start" id="startBtn" onclick="enterApp()" disabled>🚀 우리 팀 관찰 시작하기</button>
+    <button class="btn-start" id="startBtn" onclick="enterApp()" disabled>🚀 관찰 시작하기</button>
     <div class="returning-note" id="returningNote"></div>
   </div>
 </div>
@@ -299,7 +297,7 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
           <div class="city-row">
             <label>📍 우리 지역</label>
             <select class="city-select" id="citySel">
-              <option value="37.5665,126.9780">서울</option><option value="35.1796,129.0756">부산</option>
+              <option value="37.4805,127.1450" selected>위례신도시</option><option value="37.4200,127.1265">성남</option><option value="37.5393,127.2148">하남</option><option value="37.5145,127.1060">송파(잠실)</option><option value="37.5665,126.9780">서울</option><option value="35.1796,129.0756">부산</option>
               <option value="35.8714,128.6014">대구</option><option value="37.4563,126.7052">인천</option>
               <option value="35.1595,126.8526">광주</option><option value="36.3504,127.3845">대전</option>
               <option value="35.5384,129.3114">울산</option><option value="37.2750,127.0095">수원</option>
@@ -337,23 +335,23 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
           <div class="form-grid">
             <div class="fg"><label>기온 (℃)</label><input type="number" id="i-temp" step="0.1" placeholder="26.5" /></div>
             <div class="fg"><label>습도 (%)</label><input type="number" id="i-humi" step="1" min="0" max="100" placeholder="72" /></div>
-            <div class="fg"><label>날씨 상태</label><select id="i-sky"><option value="">골라요</option><option>맑음</option><option>구름조금</option><option>구름많음</option><option>흐림</option><option>비</option><option>소나기</option><option>안개</option></select></div>
+            <div class="fg"><label>날씨 상태</label><select id="i-sky"><option value="">선택</option><option>맑음</option><option>구름조금</option><option>구름많음</option><option>흐림</option><option>비</option><option>소나기</option><option>안개</option></select></div>
             <div class="fg"><label>강수량 (mm)</label><input type="number" id="i-rain" step="0.1" min="0" placeholder="0" /></div>
           </div>
           <div class="form-sec"><span class="fs-emoji">🪴</span> 토양 (테스터로 측정)</div>
           <p style="font-size:11px;color:var(--ink-3);margin:-4px 0 8px;line-height:1.5;">테스터를 흙에 꽂고 나온 값을 골라요! 🔌</p>
           <div class="form-grid">
             <div class="fg"><label>💧 토양 수분</label>
-              <select id="i-moist"><option value="">골라요</option><option>건조 (5~20%)</option><option>건조+ (20~40%)</option><option>보통 (40~60%)</option><option>습함 (60~80%)</option><option>습함+ (80~95%)</option></select>
+              <select id="i-moist"><option value="">선택</option><option>건조 (5~20%)</option><option>건조+ (20~40%)</option><option>보통 (40~60%)</option><option>습함 (60~80%)</option><option>습함+ (80~95%)</option></select>
               <span class="hint">테스터 물방울 5단계</span>
             </div>
             <div class="fg"><label>🧪 토양 pH (산성/염기성)</label>
-              <select id="i-ph"><option value="">골라요</option><option>강산성 (3~4)</option><option>약산성 (5~6)</option><option>중성 (7)</option><option>약염기성 (8~9)</option></select>
+              <select id="i-ph"><option value="">선택</option><option>강산성 (3~4)</option><option>약산성 (5~6)</option><option>중성 (7)</option><option>약염기성 (8~9)</option></select>
               <span class="hint">대부분 식물은 약산성~중성을 좋아해요</span>
             </div>
             <div class="fg"><label>🌡️ 토양 온도 (℃)</label><input type="number" id="i-stemp" step="0.1" placeholder="22" /><span class="hint">흙 속 온도</span></div>
             <div class="fg"><label>🌱 토양 비옥도 (영양분)</label>
-              <select id="i-fert"><option value="">골라요</option><option>낮음 (0~30%)</option><option>보통 (30~60%)</option><option>높음 (60~95%)</option></select>
+              <select id="i-fert"><option value="">선택</option><option>낮음 (0~30%)</option><option>보통 (30~60%)</option><option>높음 (60~95%)</option></select>
               <span class="hint">흙이 얼마나 기름진지</span>
             </div>
           </div>
@@ -361,7 +359,7 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
           <div class="form-sec"><span class="fs-emoji">💦</span> 물 (테스터로 측정)</div>
           <div class="form-grid">
             <div class="fg"><label>💧 물 깨끗함 (TDS)</label>
-              <select id="i-wtds"><option value="">골라요</option><option>순수한 물 (0~50)</option><option>고품질 연수 (50~150)</option><option>일반 수돗물 (150~300)</option><option>중간 경수 (300~500)</option><option>강한 경수 (500~800)</option><option>아주 강한 경수 (800~1000)</option></select>
+              <select id="i-wtds"><option value="">선택</option><option>순수한 물 (0~50)</option><option>고품질 연수 (50~150)</option><option>일반 수돗물 (150~300)</option><option>중간 경수 (300~500)</option><option>강한 경수 (500~800)</option><option>아주 강한 경수 (800~1000)</option></select>
               <span class="hint">물에 녹아있는 물질의 양 (ppm)</span>
             </div>
             <div class="fg"><label>🌡️ 물 온도 (℃)</label><input type="number" id="i-wtemp" step="0.1" placeholder="18" /></div>
@@ -370,10 +368,10 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
           <div class="form-grid">
             <div class="fg"><label>키 / 초장 (cm)</label><input type="number" id="i-height" step="0.1" min="0" placeholder="18.5" /></div>
             <div class="fg"><label>잎 개수</label><input type="number" id="i-leaves" step="1" min="0" placeholder="12" /></div>
-            <div class="fg"><label>꽃 상태</label><select id="i-flower"><option value="">골라요</option><option>아직 안 폈어요</option><option>봉오리가 생겼어요</option><option>꽃이 피기 시작</option><option>활짝 폈어요</option><option>지기 시작</option><option>다 졌어요</option></select></div>
-            <div class="fg"><label>잎 색깔</label><select id="i-leaf"><option value="">골라요</option><option>밝은 초록</option><option>진한 초록</option><option>연두색</option><option>황록색</option><option>갈색 반점</option><option>노란색</option></select></div>
-            <div class="fg"><label>건강 상태</label><select id="i-health"><option value="">골라요</option><option>아주 건강해요 (5)</option><option>건강해요 (4)</option><option>보통이에요 (3)</option><option>조금 아파요 (2)</option><option>많이 아파요 (1)</option></select></div>
-            <div class="fg"><label>벌레·병</label><select id="i-pest"><option value="">골라요</option><option>없어요</option><option>진딧물</option><option>흰가루병</option><option>응애</option><option>다른 벌레·병</option></select></div>
+            <div class="fg"><label>꽃 상태</label><select id="i-flower"><option value="">선택</option><option>아직 안 폈어요</option><option>봉오리가 생겼어요</option><option>꽃이 피기 시작</option><option>활짝 폈어요</option><option>지기 시작</option><option>다 졌어요</option></select></div>
+            <div class="fg"><label>잎 색깔</label><select id="i-leaf"><option value="">선택</option><option>밝은 초록</option><option>진한 초록</option><option>연두색</option><option>황록색</option><option>갈색 반점</option><option>노란색</option></select></div>
+            <div class="fg"><label>건강 상태</label><select id="i-health"><option value="">선택</option><option>아주 건강해요 (5)</option><option>건강해요 (4)</option><option>보통이에요 (3)</option><option>조금 아파요 (2)</option><option>많이 아파요 (1)</option></select></div>
+            <div class="fg"><label>벌레·병</label><select id="i-pest"><option value="">선택</option><option>없어요</option><option>진딧물</option><option>흰가루병</option><option>응애</option><option>다른 벌레·병</option></select></div>
             <div class="fg full"><label>오늘 본 것 ✏️</label><textarea id="i-note" placeholder="오늘 새로 발견한 것, 달라진 점을 자유롭게 적어요!&#10;예) 봉오리가 3개 생겼어요. 잎 끝이 살짝 말랐어요."></textarea></div>
             <div class="fg full"><label>내 생각 💡 (이게 무슨 뜻일까?)</label><textarea id="i-mean" placeholder="관찰하고 알게 된 것, 궁금한 것을 적어요!&#10;예) 비 온 다음 날 흙이 촉촉해지고 키가 더 자란 것 같아요."></textarea></div>
           </div>
@@ -580,24 +578,22 @@ function userRecs(p){ return (records[currentTeam]&&records[currentTeam][p])||[]
 
 function pickPlant(p){ pickedPlant=p; document.querySelectorAll('.plant-pick').forEach(el=>el.classList.toggle('sel',el.dataset.p===p)); checkLoginReady(); }
 function checkLoginReady(){
-  const team=document.getElementById('loginTeam').value.trim();
   const name=document.getElementById('loginName').value.trim();
-  document.getElementById('startBtn').disabled=!(team.length>0&&name.length>0&&pickedPlant);
+  document.getElementById('startBtn').disabled=!(name.length>0&&pickedPlant);
   const note=document.getElementById('returningNote');
-  if(team.length>0){ loadAll();
-    if(records[team]){ const total=Object.values(records[team]).reduce((s,a)=>s+a.length,0);
-      note.textContent=total>0?`👋 ${team} 팀, 다시 왔네요! 지금까지 ${total}개 기록했어요.`:''; }
+  if(name.length>0){ loadAll();
+    if(records[name]){ const total=Object.values(records[name]).reduce((s,a)=>s+a.length,0);
+      note.textContent=total>0?`👋 ${name}님, 다시 왔네요! 지금까지 ${total}개 기록했어요.`:''; }
     else note.textContent='';
   } else note.textContent='';
 }
 function enterApp(){
-  const team=document.getElementById('loginTeam').value.trim();
   const name=document.getElementById('loginName').value.trim();
-  if(!team||!name||!pickedPlant) return;
-  currentTeam=team; currentUser=name; currentPlant=pickedPlant; loadAll();
+  if(!name||!pickedPlant) return;
+  currentTeam=name; currentUser=name; currentPlant=pickedPlant; loadAll();
   if(!records[currentTeam]) records[currentTeam]={};
-  document.getElementById('teamName').textContent='🏆 '+team;
-  document.getElementById('userSub').textContent='송례중학교 · '+name;
+  document.getElementById('teamName').textContent='🌱 '+name;
+  document.getElementById('userSub').textContent='송례중학교';
   document.getElementById('userAvatar').textContent=PLANTS[currentPlant].emoji;
   document.getElementById('i-name').value=name;
   document.getElementById('loginScreen').classList.add('hide');
@@ -608,7 +604,7 @@ function enterApp(){
   renderPollinatorGrid();
   updateCloudBadge();
   showPage('observe');
-  ftoast(`${team} 팀, 환영해요! ${PLANTS[currentPlant].emoji}`);
+  ftoast(`${name}님, 환영해요! ${PLANTS[currentPlant].emoji}`);
 }
 function logout(){
   if(!confirm('첫 화면으로 나갈까요? (기록은 안전하게 저장돼 있어요)')) return;
@@ -715,10 +711,10 @@ function renderRecords(){
 function exportExcel(){
   const recs=userRecs(currentPlant);
   if(!recs.length){ ftoast('내보낼 기록이 없어요!'); return; }
-  const headers=['날짜','관찰자','팀','기온℃','습도%','날씨','강수량mm','토양수분','토양pH','토양온도℃','토양비옥도','물TDS','물온도℃','키cm','잎개수','꽃상태','잎색깔','건강상태','벌레병','수분매개자','오늘본것','내생각'];
+  const headers=['날짜','관찰자','기온℃','습도%','날씨','강수량mm','토양수분','토양pH','토양온도℃','토양비옥도','물TDS','물온도℃','키cm','잎개수','꽃상태','잎색깔','건강상태','벌레병','수분매개자','오늘본것','내생각'];
   const rows=recs.map(r=>{
     const pollStr=(r.poll&&Object.keys(r.poll).length)?Object.entries(r.poll).map(([id,c])=>{const p=POLLINATORS.find(x=>x.id===id);return p?`${p.n}:${c}`:'';}).filter(Boolean).join(' / '):'';
-    return [r.date,r.name,r.team,r.temp,r.humi,r.sky,r.rain,r.moist,r.ph,r.stemp,r.fert,r.wtds,r.wtemp,r.height,r.leaves,r.flower,r.leaf,r.health,r.pest,pollStr,r.note,r.mean].map(v=>`"${(v==null?'':String(v)).replace(/"/g,'""')}"`).join(',');
+    return [r.date,r.name,r.temp,r.humi,r.sky,r.rain,r.moist,r.ph,r.stemp,r.fert,r.wtds,r.wtemp,r.height,r.leaves,r.flower,r.leaf,r.health,r.pest,pollStr,r.note,r.mean].map(v=>`"${(v==null?'':String(v)).replace(/"/g,'""')}"`).join(',');
   });
   const csv='\uFEFF'+headers.join(',')+'\n'+rows.join('\n');
   const blob=new Blob([csv],{type:'text/csv;charset=utf-8;'}), url=URL.createObjectURL(blob), a=document.createElement('a');
@@ -765,7 +761,7 @@ function renderCharts(){
     const plabels=pollIds.map(id=>{const p=POLLINATORS.find(x=>x.id===id);return p?p.e+' '+p.n:id;});
     const pdata=pollIds.map(id=>pollTotals[id]);
     const pcolors=['#FFD54F','#FFB74D','#BA68C8','#9575CD','#81C784','#4DB6AC','#4FC3F7','#F06292','#A1887F','#90A4AE'];
-    cc('c-poll','우리 팀이 본 수분매개자 🐝','🦋',null,{type:'bar',data:{labels:plabels,datasets:[{data:pdata,backgroundColor:pdata.map((_,i)=>pcolors[i%pcolors.length]),borderRadius:8,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{...bX,ticks:{color:tick,font:{size:10},stepSize:1},title:{display:true,text:'본 마리 수(합계)',color:tick,font:{size:11}}},y:{...bY}}}}, Math.max(150, pollIds.length*38+40));
+    cc('c-poll','내가 본 수분매개자 🐝','🦋',null,{type:'bar',data:{labels:plabels,datasets:[{data:pdata,backgroundColor:pdata.map((_,i)=>pcolors[i%pcolors.length]),borderRadius:8,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{...bX,ticks:{color:tick,font:{size:10},stepSize:1},title:{display:true,text:'본 마리 수(합계)',color:tick,font:{size:11}}},y:{...bY}}}}, Math.max(150, pollIds.length*38+40));
   }
   const sm=localStorage.getItem(mkey(currentPlant))||'';
   meanEl.innerHTML=`<div class="mean-box"><h3>💡 그래프를 보고 알게 된 것</h3><textarea id="meanTa" placeholder="그래프에서 신기한 점, 더 알고 싶은 것을 적어봐요!&#10;예) 비 온 다음 날 키가 갑자기 컸어요. 물이 많으면 더 잘 자라는 걸까요?">${sm}</textarea><button class="btn-mean" onclick="saveMean()">소감 저장하기</button></div>`;
@@ -833,13 +829,13 @@ function ftoast(msg){ const el=document.getElementById('ftoast'); el.textContent
 // ═══ 저장 축하 팝업 ═══
 const CHEERS=[
   {e:'🎨',msg:'오늘도 학교에 색깔 한 스푼 추가!',sub:'화이팅! 🌈'},
-  {e:'🌱',msg:'관찰 기록 완료!',sub:'우리 팀 최고예요! 💚'},
+  {e:'🌱',msg:'관찰 기록 완료!',sub:'오늘도 최고예요! 💚'},
   {e:'🔬',msg:'멋진 과학자가 되어가고 있어요!',sub:'꾸준함이 최고! ⭐'},
   {e:'🌸',msg:'식물이 여러분을 기억할 거예요!',sub:'오늘도 수고했어요! 🌟'},
   {e:'🐝',msg:'자연을 지키는 작은 영웅!',sub:'참 잘했어요! 👏'},
   {e:'📸',msg:'오늘의 발견, 잘 담았어요!',sub:'내일도 기대돼요! 😊'},
   {e:'🌻',msg:'꾸준한 관찰이 큰 발견을 만들어요!',sub:'화이팅! 💪'},
-  {e:'🏆',msg:'우리 팀 기록이 쌓이고 있어요!',sub:'멋져요! 🎉'},
+  {e:'🏆',msg:'기록이 차곡차곡 쌓이고 있어요!',sub:'멋져요! 🎉'},
   {e:'🌈',msg:'컬러풀 스쿨을 함께 만들어요!',sub:'고마워요! 💛'},
   {e:'✨',msg:'작은 관찰, 큰 배움!',sub:'오늘도 반짝였어요! ⭐'}
 ];
