@@ -229,6 +229,21 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
 #ftoast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 @keyframes spin { to { transform:rotate(360deg); } }
 .spinning { animation:spin .8s linear infinite; display:inline-block; }
+
+/* 저장 축하 팝업 */
+.cheer-overlay { position:fixed; inset:0; background:rgba(74,66,56,.45); display:none; align-items:center; justify-content:center; z-index:2000; padding:1.5rem; }
+.cheer-overlay.show { display:flex; animation:cheerFade .25s; }
+@keyframes cheerFade { from{opacity:0;} to{opacity:1;} }
+.cheer-card { background:var(--paper); border:4px solid var(--mint-d); border-radius:28px; padding:32px 28px; max-width:340px; width:100%; text-align:center; box-shadow:0 12px 0 #EFE6D6, 0 20px 40px rgba(0,0,0,.15); animation:cheerPop .4s cubic-bezier(.34,1.56,.64,1); }
+@keyframes cheerPop { 0%{transform:scale(.5) rotate(-8deg); opacity:0;} 60%{transform:scale(1.08) rotate(3deg);} 100%{transform:scale(1) rotate(0); opacity:1;} }
+.cheer-emoji { font-size:64px; line-height:1; margin-bottom:12px; animation:cheerBob 1.2s ease-in-out infinite; }
+@keyframes cheerBob { 0%,100%{transform:translateY(0) rotate(-4deg);} 50%{transform:translateY(-8px) rotate(4deg);} }
+.cheer-msg { font-family:var(--round); font-size:21px; color:var(--ink); line-height:1.4; margin-bottom:6px; }
+.cheer-sub { font-family:var(--hand); font-size:17px; font-weight:700; color:var(--mint-dd); margin-bottom:20px; }
+.cheer-btn { font-family:var(--round); font-size:17px; color:#fff; background:var(--mint-d); border:none; border-radius:16px; padding:12px 32px; cursor:pointer; box-shadow:0 4px 0 var(--mint-dd); transition:transform .1s, box-shadow .1s; }
+.cheer-btn:active { transform:translateY(3px); box-shadow:0 1px 0 var(--mint-dd); }
+.confetti { position:fixed; top:-20px; font-size:20px; z-index:2001; pointer-events:none; animation:confettiFall linear forwards; }
+@keyframes confettiFall { to{ transform:translateY(105vh) rotate(720deg); opacity:.3; } }
 </style>
 </head>
 <body>
@@ -424,6 +439,16 @@ body { font-family: var(--sans); background: var(--cream); color: var(--ink); li
 </div>
 
 <div id="ftoast"></div>
+
+<!-- 저장 축하 팝업 -->
+<div class="cheer-overlay" id="cheerOverlay" onclick="closeCheer()">
+  <div class="cheer-card" onclick="event.stopPropagation()">
+    <div class="cheer-emoji" id="cheerEmoji">🎨</div>
+    <div class="cheer-msg" id="cheerMsg">오늘도 학교에 색깔 한 스푼 추가!</div>
+    <div class="cheer-sub" id="cheerSub">화이팅! 🌈</div>
+    <button class="cheer-btn" onclick="closeCheer()">고마워요! 😊</button>
+  </div>
+</div>
 
 <script>
 const PLANTS = {
@@ -670,6 +695,7 @@ function saveRecord(){
   ['i-height','i-leaves','i-note','i-mean'].forEach(id=>document.getElementById(id).value='');
   resetPhotoUI();
   resetPollUI();
+  showCheer();
 }
 
 function renderRecords(){
@@ -747,7 +773,13 @@ function renderCharts(){
 function saveMean(){ localStorage.setItem(mkey(currentPlant),document.getElementById('meanTa').value); ftoast('소감을 저장했어요! 💡'); }
 
 // ═══ 구글시트 클라우드 연동 ═══
-function getCloudUrl(){ return localStorage.getItem('cs_cloud_url')||''; }
+// 선생님 구글시트 주소 (미리 설정됨 - 학생은 설정 없이 자동 전송)
+const DEFAULT_CLOUD_URL='https://script.google.com/macros/s/AKfycbz6hKcyDOdeGDD_vpZOrrerPPT9SvsDkWns8Jfd2iXsXw5m31zBe9YqC1kp1mCWPGjrFw/exec';
+function getCloudUrl(){
+  const saved=localStorage.getItem('cs_cloud_url');
+  if(saved!==null) return saved;      // 사용자가 직접 바꿨으면 그 값
+  return DEFAULT_CLOUD_URL;            // 아니면 미리 심어둔 선생님 주소
+}
 function setCloudUrl(u){ localStorage.setItem('cs_cloud_url', u.trim()); }
 
 function sendToCloud(rec, plant){
@@ -797,6 +829,42 @@ function refHtml(r){ return `<a class="ref-link" href="${r.u}" target="_blank" r
 
 let toastTimer;
 function ftoast(msg){ const el=document.getElementById('ftoast'); el.textContent=msg; el.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>el.classList.remove('show'),2400); }
+
+// ═══ 저장 축하 팝업 ═══
+const CHEERS=[
+  {e:'🎨',msg:'오늘도 학교에 색깔 한 스푼 추가!',sub:'화이팅! 🌈'},
+  {e:'🌱',msg:'관찰 기록 완료!',sub:'우리 팀 최고예요! 💚'},
+  {e:'🔬',msg:'멋진 과학자가 되어가고 있어요!',sub:'꾸준함이 최고! ⭐'},
+  {e:'🌸',msg:'식물이 여러분을 기억할 거예요!',sub:'오늘도 수고했어요! 🌟'},
+  {e:'🐝',msg:'자연을 지키는 작은 영웅!',sub:'참 잘했어요! 👏'},
+  {e:'📸',msg:'오늘의 발견, 잘 담았어요!',sub:'내일도 기대돼요! 😊'},
+  {e:'🌻',msg:'꾸준한 관찰이 큰 발견을 만들어요!',sub:'화이팅! 💪'},
+  {e:'🏆',msg:'우리 팀 기록이 쌓이고 있어요!',sub:'멋져요! 🎉'},
+  {e:'🌈',msg:'컬러풀 스쿨을 함께 만들어요!',sub:'고마워요! 💛'},
+  {e:'✨',msg:'작은 관찰, 큰 배움!',sub:'오늘도 반짝였어요! ⭐'}
+];
+function showCheer(){
+  const c=CHEERS[Math.floor(Math.random()*CHEERS.length)];
+  document.getElementById('cheerEmoji').textContent=c.e;
+  document.getElementById('cheerMsg').textContent=c.msg;
+  document.getElementById('cheerSub').textContent=c.sub;
+  document.getElementById('cheerOverlay').classList.add('show');
+  dropConfetti();
+}
+function closeCheer(){ document.getElementById('cheerOverlay').classList.remove('show'); }
+function dropConfetti(){
+  const emojis=['🎉','🌸','⭐','🌈','💚','🌱','✨','🎨'];
+  for(let i=0;i<18;i++){
+    const c=document.createElement('div');
+    c.className='confetti';
+    c.textContent=emojis[Math.floor(Math.random()*emojis.length)];
+    c.style.left=Math.random()*100+'vw';
+    c.style.animationDuration=(1.5+Math.random()*1.5)+'s';
+    c.style.animationDelay=(Math.random()*.3)+'s';
+    document.body.appendChild(c);
+    setTimeout(()=>c.remove(),3200);
+  }
+}
 
 (function(){ const t=new Date(); document.getElementById('i-date').value=`${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`; })();
 </script>
