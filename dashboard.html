@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>선생님 대시보드 — 자생식물 관찰일지</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💚</text></svg>" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Jua&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet" />
@@ -72,6 +73,15 @@ body{ font-family:var(--sans); color:var(--ink); background:var(--cream); min-he
 .group-head .gh-count{ font-size:12px; color:var(--ink-3); font-family:var(--sans); }
 
 /* 2단계 분류: 식물 섹션 */
+.view-label{ font-family:var(--round); font-size:14px; color:var(--ink-2); display:flex; align-items:center; }
+
+/* 날짜별 보기 */
+.date-section{ margin-bottom:14px; }
+.date-head{ width:100%; text-align:left; font-family:var(--round); font-size:17px; color:var(--ink); background:linear-gradient(120deg,#FFF3E0,#E8F1FC); border:2.5px solid var(--line-d); border-radius:16px; padding:14px 18px; cursor:pointer; display:flex; align-items:center; gap:10px; transition:filter .12s; }
+.date-head:hover{ filter:brightness(.97); }
+.date-head .sh-arrow{ font-size:13px; color:var(--green-d); width:14px; }
+.date-head .sh-count{ margin-left:auto; font-size:12px; color:var(--ink-2); font-family:var(--sans); font-weight:500; }
+
 .plant-section{ margin-bottom:2.5rem; }
 .plant-section-head{ font-family:var(--round); font-size:20px; color:var(--ink); padding:12px 18px; border-radius:16px; margin-bottom:14px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
 .plant-section-head.꿀풀{ background:var(--꿀풀-bg); }
@@ -100,6 +110,8 @@ body{ font-family:var(--sans); color:var(--ink); background:var(--cream); min-he
 .rec-plant.층꽃나무{ background:var(--층꽃나무-bg); color:var(--층꽃나무); }
 .rec-name{ font-family:var(--round); font-size:15px; color:var(--ink); }
 .rec-date{ font-size:11px; color:var(--ink-3); margin-left:auto; }
+.rec-del{ background:none; border:none; cursor:pointer; font-size:15px; padding:2px 4px; border-radius:8px; margin-left:6px; opacity:.55; transition:opacity .12s, background .12s; line-height:1; }
+.rec-del:hover{ opacity:1; background:#FDE8E8; }
 .rec-data{ display:grid; grid-template-columns:repeat(3,1fr); gap:5px; margin-bottom:8px; }
 .dcell{ background:var(--cream); border-radius:8px; padding:5px 6px; text-align:center; }
 .dcell .dl{ font-size:9px; color:var(--ink-3); }
@@ -160,6 +172,7 @@ body{ font-family:var(--sans); color:var(--ink); background:var(--cream); min-he
 const PLANT_EMOJI = { '꿀풀':'💜', '구절초':'🌼', '층꽃나무':'🌿' };
 let allRecords = [];
 let filterPlant = 'all';
+let viewMode = 'plant'; // 'plant'(식물별) or 'date'(날짜별)
 let searchText = '';
 const openGroups = {}; // 학생 그룹 접기/펼치기 상태 기억
 
@@ -218,17 +231,24 @@ function render(){
     <div class="stat"><div class="sv">${withPhoto}</div><div class="sl">사진 기록</div></div>
   </div>`;
 
-  // 필터 (식물 골라보기 + 검색)
+  // 보기 모드 전환 (식물별 / 날짜별)
   html+=`<div class="filters">
-    <button class="chip-filter ${filterPlant==='all'?'on':''}" onclick="setPlant('all')">🌈 전체 식물</button>
-    ${['꿀풀','구절초','층꽃나무'].map(p=>`<button class="chip-filter ${filterPlant===p?'on':''}" data-plant="${p}" onclick="setPlant('${p}')">${PLANT_EMOJI[p]} ${p}</button>`).join('')}
+    <span class="view-label">📂 보기:</span>
+    <button class="chip-filter ${viewMode==='plant'?'on':''}" onclick="setView('plant')">🌿 식물별</button>
+    <button class="chip-filter ${viewMode==='date'?'on':''}" onclick="setView('date')">📅 날짜별</button>
+  </div>`;
+
+  // 식물 필터 + 검색 (식물별 볼 때만 식물 필터 표시)
+  html+=`<div class="filters">
+    ${viewMode==='plant'?`<button class="chip-filter ${filterPlant==='all'?'on':''}" onclick="setPlant('all')">🌈 전체 식물</button>
+    ${['꿀풀','구절초','층꽃나무'].map(p=>`<button class="chip-filter ${filterPlant===p?'on':''}" data-plant="${p}" onclick="setPlant('${p}')">${PLANT_EMOJI[p]} ${p}</button>`).join('')}`:''}
     <input class="search-box" placeholder="🔍 이름 검색..." value="${esc(searchText)}" oninput="onSearch(this.value)" />
   </div>`;
 
   // 데이터 준비
   let recs=allRecords.slice();
   if(searchText) recs=recs.filter(r=>(r.name||'').includes(searchText));
-  if(filterPlant!=='all') recs=recs.filter(r=>r.plant===filterPlant);
+  if(viewMode==='plant' && filterPlant!=='all') recs=recs.filter(r=>r.plant===filterPlant);
   recs.sort((a,b)=>String(b.date).localeCompare(String(a.date)));
 
   if(!recs.length){
@@ -237,7 +257,34 @@ function render(){
     return;
   }
 
-  // 2단계 그룹핑: 식물 → 학생
+  if(viewMode==='date'){
+    // ═══ 날짜별 보기: 날짜 → 그날 기록들 ═══
+    const byDate={};
+    recs.forEach(r=>{ const d=r.date||'날짜없음'; (byDate[d]=byDate[d]||[]).push(r); });
+    // 최신 날짜부터
+    const dateKeys=Object.keys(byDate).sort((a,b)=>b.localeCompare(a));
+    dateKeys.forEach(date=>{
+      const items=byDate[date];
+      const gid='d_'+btoa(unescape(encodeURIComponent(date))).replace(/[^a-zA-Z0-9]/g,'');
+      const isOpen=openGroups[gid]!==false;
+      // 그날 참여한 학생 수
+      const students=[...new Set(items.map(r=>r.name))].filter(Boolean).length;
+      html+=`<div class="date-section">
+        <button class="date-head" onclick="toggleGroup('${gid}')">
+          <span class="sh-arrow" id="arrow-${gid}">${isOpen?'▼':'▶'}</span>
+          📅 ${fmtDateFull(date)}
+          <span class="sh-count">학생 ${students}명 · 기록 ${items.length}개</span>
+        </button>
+        <div class="student-body" id="body-${gid}" style="${isOpen?'':'display:none;'}">
+          <div class="card-grid">${items.map(cardHtml).join('')}</div>
+        </div>
+      </div>`;
+    });
+    c.innerHTML=html;
+    return;
+  }
+
+  // ═══ 식물별 보기: 식물 → 학생 (2단계) ═══
   const plantOrder=['꿀풀','구절초','층꽃나무'];
   const byPlant={};
   recs.forEach(r=>{ (byPlant[r.plant]=byPlant[r.plant]||[]).push(r); });
@@ -306,6 +353,9 @@ function cardHtml(r){
 
   const poll = r.pollinators ? `<div class="rec-poll">${String(r.pollinators).split(' / ').map(p=>`<span class="rp">🐝 ${esc(p)}</span>`).join('')}</div>` : '';
 
+  // 삭제에 필요한 정보를 안전하게 인코딩 (한글 대응)
+  const delKey=btoa(unescape(encodeURIComponent(JSON.stringify({plant:r.plant,date:r.date,name:r.name}))));
+
   return `<div class="rec-card">
     ${photo}
     <div class="rec-body">
@@ -313,6 +363,7 @@ function cardHtml(r){
         <span class="rec-plant ${esc(r.plant)}">${pe} ${esc(r.plant)}</span>
         <span class="rec-name">${esc(r.name||'')}</span>
         <span class="rec-date">${fmtDate(r.date)}</span>
+        <button class="rec-del" onclick="deleteRecord('${delKey}')" title="이 기록 삭제 (선생님용)">🗑️</button>
       </div>
       ${cells.length?`<div class="rec-data">${cells.map(c=>`<div class="dcell"><div class="dl">${esc(c.l)}</div><div class="dv">${esc(c.v)}</div></div>`).join('')}</div>`:''}
       ${poll}
@@ -323,6 +374,31 @@ function cardHtml(r){
 }
 function esc(s){ return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 function openModalSrc(src){ document.getElementById('modalImg').src=src; document.getElementById('photoModal').classList.add('show'); }
+
+// 기록 삭제 (선생님만 - 비밀번호 필요)
+async function deleteRecord(delKey){
+  let info;
+  try{ info=JSON.parse(decodeURIComponent(escape(atob(delKey)))); }catch(e){ alert('삭제 정보를 읽지 못했어요.'); return; }
+  const who=`${info.name} · ${info.plant} · ${info.date}`;
+  if(!confirm(`이 기록을 삭제할까요?\n\n${who}\n\n삭제하면 되돌릴 수 없어요.`)) return;
+  const pw=prompt('선생님 비밀번호를 입력하세요 🔐');
+  if(pw===null) return;  // 취소
+  if(!pw.trim()){ alert('비밀번호를 입력해주세요.'); return; }
+
+  const url=getUrl();
+  try{
+    await fetch(url, {
+      method:'POST', mode:'no-cors',
+      headers:{'Content-Type':'text/plain;charset=utf-8'},
+      body:JSON.stringify({action:'delete', plant:info.plant, date:info.date, name:info.name, password:pw})
+    });
+    // no-cors라 응답을 못 읽으니, 잠깐 기다렸다 새로고침해서 확인
+    alert('삭제 요청을 보냈어요. 잠시 후 목록을 새로고침합니다.\n\n(비밀번호가 틀렸다면 그대로 남아있어요.)');
+    setTimeout(()=>loadData(), 1500);
+  }catch(e){
+    alert('삭제 중 문제가 생겼어요. 다시 시도해주세요.');
+  }
+}
 
 function fmtDate(d){
   if(!d) return '';
@@ -337,7 +413,19 @@ function fmtDate(d){
 }
 
 function setPlant(p){ filterPlant=p; render(); }
+function setView(m){ viewMode=m; render(); }
 function onSearch(v){ searchText=v; render(); }
+// 날짜를 보기 좋게 (2026-07-15 → 2026년 7월 15일 화요일)
+function fmtDateFull(d){
+  if(!d) return '날짜없음';
+  const s=String(d);
+  const m=s.match(/(\d{4})-(\d{2})-(\d{2})/);
+  if(!m) return s;
+  const dt=new Date(+m[1],+m[2]-1,+m[3]);
+  const days=['일','월','화','수','목','금','토'];
+  const dow=isNaN(dt.getTime())?'':' '+days[dt.getDay()]+'요일';
+  return `${+m[1]}년 ${+m[2]}월 ${+m[3]}일${dow}`;
+}
 function closeModal(){ document.getElementById('photoModal').classList.remove('show'); }
 
 // 시작: 저장된 주소 있으면 바로 로드
