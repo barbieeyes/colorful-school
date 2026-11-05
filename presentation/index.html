@@ -1,0 +1,403 @@
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>송례중학교 컬러풀스쿨 활동 발표</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&display=swap">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}html,body{height:100%;background:#1d1a17;overflow:hidden}
+#stage{position:absolute;left:50%;top:50%;width:1920px;height:1080px;transform-origin:center}
+#stage>section{position:absolute;inset:0;width:1920px;height:1080px;overflow:hidden;opacity:0;visibility:hidden;transition:opacity .6s,visibility .6s}
+#stage>section.on{opacity:1;visibility:visible}
+#play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:400 44px Jua,sans-serif;padding:22px 54px;border:0;border-radius:60px;background:rgba(62,111,79,.92);color:#fff;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+#ui{position:fixed;right:16px;bottom:14px;background:rgba(0,0,0,.45);padding:6px 8px;border-radius:12px;display:flex;gap:8px;align-items:center;font:14px 'Noto Sans KR',sans-serif;color:#fff;opacity:0;transition:opacity .4s;z-index:9}#ui.show,#ui:hover{opacity:1}
+#ui button{background:rgba(0,0,0,.5);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:8px;padding:6px 12px;cursor:pointer;font:inherit}
+</style></head><body><div id="stage"><section id="cover" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:0;display:flex;flex-direction:column">
+<video id="intro" src="media/intro.mp4" poster="media/7091d811ea.jpg" playsinline preload="auto" style="position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover"></video><button id="play">▶ 영상 재생</button>
+
+</section>
+<section id="about" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">About</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:72px;font-weight:400;line-height:1.15">컬러풀스쿨은 어떤 활동인가요?</h2></div>
+<p style="font-size:36px;line-height:1.5;color:#6E5A4B;width:1500px">서식지 감소와 기후변화 등으로 줄어드는 꽃가루받이 곤충을 위해, 우리 땅에서 자라는 <b style="color:#4A372B">자생식물</b>로 학교 화단에 <b style="color:#4A372B">수분매개자 정원</b>을 만들고 직접 관찰·기록했어요.</p>
+<div style="display:flex;gap:40px;flex:1">
+<div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:20px;background:#FFFDF8;border-radius:28px;padding:24px 32px;box-shadow:0 8px 0 #EADCC4">
+<img src="media/d28db0faf1.png" alt="꿀풀 그림" style="width:170px;height:221px;object-fit:contain">
+<div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:48px;font-weight:400;color:#6F55A8">꿀풀</h3><p style="font-size:28px;line-height:1.45;color:#6E5A4B">보라 꽃이삭<br>초여름 꿀벌의 밥상</p></div></div><div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:20px;background:#FFFDF8;border-radius:28px;padding:24px 32px;box-shadow:0 8px 0 #EADCC4">
+<img src="media/69a7d73dbe.png" alt="층꽃나무 그림" style="width:170px;height:221px;object-fit:contain">
+<div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:48px;font-weight:400;color:#4767A8">층꽃나무</h3><p style="font-size:28px;line-height:1.45;color:#6E5A4B">층층이 피는 꽃<br>가을 곤충의 밥상</p></div></div><div style="flex:1;display:flex;flex-direction:row;align-items:center;gap:20px;background:#FFFDF8;border-radius:28px;padding:24px 32px;box-shadow:0 8px 0 #EADCC4">
+<img src="media/ceaebf69fc.png" alt="구절초 그림" style="width:170px;height:221px;object-fit:contain">
+<div style="display:flex;flex-direction:column;gap:8px"><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:48px;font-weight:400;color:#C9733F">구절초</h3><p style="font-size:28px;line-height:1.45;color:#6E5A4B">연노랑 들국화<br>가을 정원의 마무리</p></div></div></div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">2</p>
+<iframe style="position:absolute;left:1150px;top:96px;width:640px;height:200px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 0, &quot;s&quot;: 1.0, &quot;b&quot;: 1, &quot;f&quot;: 2, &quot;fs&quot;: 1.1, &quot;ground&quot;: 0, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+</section>
+<section id="native" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:32px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Native Plants</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:72px;font-weight:400;line-height:1.15">자생식물이 뭐예요?</h2></div>
+<p style="font-size:36px;line-height:1.5;color:#6E5A4B"><b style="color:#4A372B">자생식물</b>은 사람이 들여온 것이 아니라, 우리 땅에서 오래전부터 <b style="color:#4A372B">저절로 나고 자라 온 식물</b>이에요.</p>
+<div style="display:flex;gap:40px;align-items:start"><div style="display:flex;flex-direction:column;gap:18px;width:764px"><div style="display:flex;gap:24px;align-items:center;background:#FFFDF8;border-radius:24px;padding:22px 28px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#3E6F4F;width:56px;height:56px;flex:none"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:36px;font-weight:400">우리 땅에서 오래 살아왔어요</h3><p style="font-size:26px;color:#6E5A4B">우리 기후와 흙에 맞아 물과 비료가 덜 들어요.</p></div></div><div style="display:flex;gap:24px;align-items:center;background:#FFFDF8;border-radius:24px;padding:22px 28px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#3E6F4F;width:56px;height:56px;flex:none"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a6 6 0 0 1 12 0v1"/><path d="M16 3.5a4 4 0 0 1 0 9"/><path d="M22 21v-1a6 6 0 0 0-4-5.6"/></svg><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:36px;font-weight:400">우리 곤충과 함께 살아왔어요</h3><p style="font-size:26px;color:#6E5A4B">토박이 벌과 나비가 꿀과 꽃가루를 얻어요.</p></div></div><div style="display:flex;gap:24px;align-items:center;background:#FFFDF8;border-radius:24px;padding:22px 28px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#3E6F4F;width:56px;height:56px;flex:none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div style="display:flex;flex-direction:column;gap:4px"><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:36px;font-weight:400">계절마다 꽃이 이어져요</h3><p style="font-size:26px;color:#6E5A4B">초여름부터 가을까지 먹이가 끊기지 않아요.</p></div></div></div><div style="position:relative;width:860px;height:440px;background:#FFFDF8;border-radius:28px;box-shadow:0 8px 0 #EADCC4"><p style="position:absolute;left:40px;top:28px;width:700px;font-family:Jua, 'Noto Sans KR', sans-serif;font-size:36px">꽃 피는 때가 이어져요</p><p style="position:absolute;left:40px;top:100px;width:133px;text-align:center;font-size:26px;color:#6E5A4B">5월</p><p style="position:absolute;left:173px;top:100px;width:133px;text-align:center;font-size:26px;color:#6E5A4B">6월</p><p style="position:absolute;left:306px;top:100px;width:133px;text-align:center;font-size:26px;color:#6E5A4B">7월</p><p style="position:absolute;left:440px;top:100px;width:133px;text-align:center;font-size:26px;color:#6E5A4B">8월</p><p style="position:absolute;left:573px;top:100px;width:133px;text-align:center;font-size:26px;color:#6E5A4B">9월</p><p style="position:absolute;left:706px;top:100px;width:133px;text-align:center;font-size:26px;color:#6E5A4B">10월</p><p style="position:absolute;left:44px;top:160px;width:525px;height:62px;background:#9C7CCB;border-radius:31px;color:#FFFDF8;font-family:Jua, 'Noto Sans KR', sans-serif;font-size:30px;line-height:62px;text-align:center">꿀풀 5~8월</p><p style="position:absolute;left:444px;top:250px;width:258px;height:62px;background:#7E9BD8;border-radius:31px;color:#FFFDF8;font-family:Jua, 'Noto Sans KR', sans-serif;font-size:30px;line-height:62px;text-align:center">층꽃나무 8~9월</p><p style="position:absolute;left:577px;top:340px;width:258px;height:62px;background:#E9A15E;border-radius:31px;color:#FFFDF8;font-family:Jua, 'Noto Sans KR', sans-serif;font-size:30px;line-height:62px;text-align:center">구절초 9~10월</p></div></div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">3</p>
+<iframe style="position:absolute;left:1150px;top:96px;width:640px;height:200px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 0, &quot;s&quot;: 1.0, &quot;b&quot;: 1, &quot;f&quot;: 2, &quot;fs&quot;: 1.1, &quot;ground&quot;: 0, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+</section>
+<section id="story" data-transition="push" style="background:#F1E8D6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:120px 128px 160px;display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Learn &amp; Explore</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:72px;font-weight:400;line-height:1.15">심기 전에, 먼저 배우고 탐구했어요</h2></div>
+<div style="display:flex;gap:40px;flex:1">
+<div style="flex:1;display:flex;flex-direction:column;gap:22px;background:#EDE3F6;border-radius:32px;padding:36px 40px;align-items:center"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:30px;color:#FFFDF8;background:#3E6F4F;padding:6px 24px;border-radius:30px">배우기</p><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:44px;font-weight:400;text-align:center">생물다양성과 자생식물 꿀풀</h3><div style="display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:16px 16px 14px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-1.5deg)"><img src="media/3244635b65.jpg" alt="워크북 속 꿀풀" style="width:600px;height:300px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:32px;color:#6E5A4B;text-align:center">워크북 속 꿀풀</p></div><p style="font-size:28px;line-height:1.5;color:#6E5A4B;text-align:center">생물다양성협약(1992)과 꿀풀을 워크북으로 공부했어요.</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:22px;background:#DDEAF7;border-radius:32px;padding:36px 40px;align-items:center"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:30px;color:#FFFDF8;background:#3E6F4F;padding:6px 24px;border-radius:30px">탐구하기</p><h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:44px;font-weight:400;text-align:center">우리 동네 장지동의 미래 기후</h3><div style="display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:16px 16px 14px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(1.5deg)"><img src="media/d6cddb762d.jpg" alt="장지동 체감온도 시나리오" style="width:600px;height:300px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:32px;color:#6E5A4B;text-align:center">장지동 체감온도 시나리오</p></div><p style="font-size:28px;line-height:1.5;color:#6E5A4B;text-align:center">기후변화 상황지도에서 2100년까지의 체감온도를 비교했어요.</p></div>
+</div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">4</p>
+<iframe style="position:absolute;left:1180px;top:90px;width:610px;height:200px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 0, &quot;s&quot;: 1.0, &quot;b&quot;: 1, &quot;f&quot;: 2, &quot;fs&quot;: 1.1, &quot;ground&quot;: 0, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+</section>
+<section id="june" data-transition="push" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:110px 110px 150px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">June</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:68px;font-weight:400;line-height:1.15">6월, 우리가 직접 정원을 만들었어요</h2></div>
+<div style="display:flex;gap:26px;align-items:start;justify-content:center">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-2deg)"><img src="media/483bc3fe20.jpg" alt="화분 주머니를 받던 날" style="width:520px;height:330px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">화분 주머니를 받던 날</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(1.5deg)"><img src="media/31cdcc7ac8.jpg" alt="자생식물 씨앗" style="width:340px;height:330px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">자생식물 씨앗</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-1deg)"><img src="media/af4b21db41.jpg" alt="구절초 모종 심기" style="width:260px;height:330px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">구절초 모종 심기</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(2deg)"><img src="media/ca1efb13ca.jpg" alt="꿀풀 모종" style="width:260px;height:330px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">꿀풀 모종</p></div>
+</div>
+<div style="display:flex;gap:26px;justify-content:center;align-items:start">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(1deg)"><img src="media/d0fb6c7167.jpg" alt="첫 물 주기" style="width:620px;height:210px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">첫 물 주기</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-1.5deg)"><img src="media/0c5c2a98c2.jpg" alt="기후위기 방탈출 게임" style="width:420px;height:210px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">기후위기 방탈출 게임</p></div>
+</div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">5</p>
+
+</section>
+<section id="summer" data-transition="fade" style="background:#F1E8D6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:110px 110px 150px;display:flex;flex-direction:column;gap:30px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Summer</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:68px;font-weight:400;line-height:1.15">무더운 여름, 스스로 견뎠어요</h2></div>
+<div style="display:flex;gap:36px;align-items:start;justify-content:center">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-1.5deg)"><img src="media/ff1f13df5e.jpg" alt="층꽃나무 · 흙 수분 33% (건조+)" style="width:560px;height:420px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">층꽃나무 · 흙 수분 33% (건조+)</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(1.5deg)"><img src="media/10c1031dd2.jpg" alt="꽃이 진 꿀풀 · 수분 35%" style="width:460px;height:420px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">꽃이 진 꿀풀 · 수분 35%</p></div>
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-1deg)"><img src="media/8b350dc1bd.jpg" alt="버티는 화분 주머니들" style="width:460px;height:420px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">버티는 화분 주머니들</p></div>
+</div>
+<p style="font-size:34px;color:#6E5A4B;text-align:center">물을 자주 주지 못해 흙은 늘 ‘건조+’였지만, 자생식물들은 잎을 지켜 냈어요</p>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">6</p>
+
+</section>
+<section id="app" data-transition="push" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:100px 110px 150px;display:flex;flex-direction:column;gap:26px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Our Own App</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:68px;font-weight:400;line-height:1.15">우리가 직접 만든 관찰일지 앱</h2></div>
+<div style="display:flex;gap:30px">
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:16px;background:#E3F0D8;border-radius:32px;padding:28px 24px">
+<img src="media/5b6a266b07.jpg" alt="언제든 기록 화면" style="width:300px;height:420px;object-fit:cover;object-position:top;border-radius:30px;border:6px solid #FFFDF8;box-shadow:0 12px 26px rgba(70,50,30,.2)">
+<h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:42px;font-weight:400;text-align:center"><span style="color:#3E6F4F">①</span> 언제든 기록</h3>
+<p style="font-size:28px;line-height:1.45;color:#6E5A4B;text-align:center">화단 앞에서 휴대폰으로<br>바로 쓰고 사진까지</p></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:16px;background:#EDE3F6;border-radius:32px;padding:28px 24px">
+<img src="media/c21b3b3b1d.jpg" alt="친구 기록 보기 화면" style="width:300px;height:420px;object-fit:cover;object-position:top;border-radius:30px;border:6px solid #FFFDF8;box-shadow:0 12px 26px rgba(70,50,30,.2)">
+<h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:42px;font-weight:400;text-align:center"><span style="color:#3E6F4F">②</span> 친구 기록 보기</h3>
+<p style="font-size:28px;line-height:1.45;color:#6E5A4B;text-align:center">친구들이 올린 기록을<br>함께 보고 배워요</p></div>
+<div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:16px;background:#FBE7D3;border-radius:32px;padding:28px 24px">
+<img src="media/55483391a7.jpg" alt="내 누적 데이터 화면" style="width:300px;height:420px;object-fit:cover;object-position:top;border-radius:30px;border:6px solid #FFFDF8;box-shadow:0 12px 26px rgba(70,50,30,.2)">
+<h3 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:42px;font-weight:400;text-align:center"><span style="color:#3E6F4F">③</span> 내 누적 데이터</h3>
+<p style="font-size:28px;line-height:1.45;color:#6E5A4B;text-align:center">쌓인 기록이 그래프와<br>나만의 관찰 일기가 돼요</p></div>
+</div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">7</p>
+
+</section>
+<section id="numbers" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Together</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:72px;font-weight:400;line-height:1.15">숫자로 보는 우리의 기록</h2></div><div style="display:flex;gap:28px"><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:#E3F0D8;border-radius:28px;padding:28px 10px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:96px;line-height:1.1">99</p><p style="font-size:30px;color:#6E5A4B">관찰 기록</p></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:#EDE3F6;border-radius:28px;padding:28px 10px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:96px;line-height:1.1">21</p><p style="font-size:30px;color:#6E5A4B">참여 학생</p></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:#DDEAF7;border-radius:28px;padding:28px 10px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:96px;line-height:1.1">72</p><p style="font-size:30px;color:#6E5A4B">사진 기록</p></div><div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;background:#FBE7D3;border-radius:28px;padding:28px 10px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:96px;line-height:1.1">3</p><p style="font-size:30px;color:#6E5A4B">자생식물</p></div></div><div style="display:flex;flex-direction:column;gap:22px"><div style="display:flex;align-items:center;gap:28px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:40px;width:200px">구절초</p><div style="width:1000px;height:52px;background:#E9A15E;border-radius:26px"></div><p style="font-size:30px;color:#6E5A4B;width:360px">기록 51개 · 학생 8명</p></div><div style="display:flex;align-items:center;gap:28px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:40px;width:200px">꿀풀</p><div style="width:764px;height:52px;background:#9C7CCB;border-radius:26px"></div><p style="font-size:30px;color:#6E5A4B;width:360px">기록 39개 · 학생 8명</p></div><div style="display:flex;align-items:center;gap:28px"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:40px;width:200px">층꽃나무</p><div style="width:176px;height:52px;background:#7E9BD8;border-radius:26px"></div><p style="font-size:30px;color:#6E5A4B;width:360px">기록 9개 · 학생 6명</p></div></div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">8</p>
+<iframe style="position:absolute;left:128px;top:750px;width:1664px;height:210px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 12, &quot;s&quot;: 1.0, &quot;b&quot;: 2, &quot;f&quot;: 2, &quot;fs&quot;: 1.0, &quot;ground&quot;: 26, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+</section>
+<section id="king" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:128px 128px 160px;display:flex;flex-direction:column;gap:40px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Best Recorder</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:72px;font-weight:400;line-height:1.15">기록왕 신민아의 구절초 일기</h2></div><div style="display:flex;gap:56px;flex:1">
+<div style="position:relative;width:1000px;height:620px;background:#FFFDF8;border-radius:28px;box-shadow:0 8px 0 #EADCC4">
+<img src="media/1942fbe6d4.png" alt="신민아가 잰 구절초 키: 6월 12일 10.5cm에서 8월 2일 19.35cm" style="position:absolute;left:70px;top:20px;width:900px;height:540px;object-fit:contain">
+<p style="position:absolute;left:12px;top:56px;width:60px;text-align:right;font-size:24px;color:#6E5A4B">20</p>
+<p style="position:absolute;left:12px;top:476px;width:60px;text-align:right;font-size:24px;color:#6E5A4B">10</p>
+<p style="position:absolute;left:70px;top:568px;width:200px;font-size:24px;color:#6E5A4B">6월 12일</p>
+<p style="position:absolute;left:770px;top:568px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">8월 2일</p>
+<p style="position:absolute;left:100px;top:40px;width:300px;font-size:24px;color:#6E5A4B">키 (cm)</p></div>
+<div style="flex:1;display:flex;flex-direction:column;gap:22px">
+<div style="display:flex;gap:20px"><div style="flex:1;background:#FBE7D3;border-radius:24px;padding:20px;display:flex;flex-direction:column;align-items:center"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:64px">36번</p><p style="font-size:26px;color:#6E5A4B">관찰 기록</p></div>
+<div style="flex:1;background:#E3F0D8;border-radius:24px;padding:20px;display:flex;flex-direction:column;align-items:center"><p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:64px">+8.85</p><p style="font-size:26px;color:#6E5A4B">cm 자람</p></div></div>
+<p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:40px;line-height:1.4;background:#FFFDF8;border-radius:24px;padding:26px 30px">“구절초를 돌보며 깨달은 것은<br>식물은 정직하다는 점이다.”</p>
+<p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:40px;line-height:1.4;background:#FFFDF8;border-radius:24px;padding:26px 30px">“계속 커지면서 책임감도<br>계속 커지고 있다.”</p></div></div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">9</p>
+<iframe style="position:absolute;left:1180px;top:96px;width:610px;height:180px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 0, &quot;s&quot;: 1.0, &quot;b&quot;: 1, &quot;f&quot;: 2, &quot;fs&quot;: 1.1, &quot;ground&quot;: 0, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+</section>
+<section id="weed" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:110px 128px 160px;display:flex;flex-direction:column;gap:30px">
+<p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:96px;line-height:1.1;color:#4A372B;text-align:center">“잡초를 왜 심지?”</p>
+<div style="display:flex;gap:56px;justify-content:center;align-items:center">
+<div style="display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:16px 16px 14px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-2deg)"><img src="media/af4b21db41.jpg" alt="6월 · 잡초 같던 구절초 모종" style="width:640px;height:420px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:32px;color:#6E5A4B;text-align:center">6월 · 잡초 같던 구절초 모종</p></div>
+<div style="background:#E6AE2E;width:110px;height:60px;flex:none;clip-path:polygon(0 30%,60% 30%,60% 0,100% 50%,60% 100%,60% 70%,0 70%)"></div>
+<div style="display:flex;flex-direction:column;gap:10px;background:#FFFDF8;padding:16px 16px 14px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(2deg)"><img src="media/887fa0cfe0.jpg" alt="가을 · 활짝 핀 구절초" style="width:640px;height:420px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:32px;color:#6E5A4B;text-align:center">가을 · 활짝 핀 구절초</p></div>
+</div>
+<p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:44px;text-align:center;color:#3E6F4F">물도 자주 못 받은 무더운 여름을 스스로 견뎌 낸 은은한 색</p>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">10</p>
+
+</section>
+<section id="gukhwa" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:110px 128px 150px;display:flex;flex-direction:column;gap:30px">
+<div style="display:flex;flex-direction:column;gap:8px"><p style="font-family:'Great Vibes', cursive;font-size:52px;line-height:1;color:#3E6F4F">Quiet Colors</p><h2 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:68px;font-weight:400;line-height:1.15">화려한 국화 옆, 은은한 구절초</h2></div>
+<div style="display:flex;gap:44px;align-items:center;justify-content:center">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(-1.5deg)"><img src="media/33ac9f7b86.jpg" alt="앞은 자생 구절초, 뒤는 화단의 국화" style="width:860px;height:560px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">앞은 자생 구절초, 뒤는 화단의 국화</p></div>
+<div style="display:flex;flex-direction:column;gap:26px;width:560px">
+<div style="display:flex;flex-direction:column;gap:8px;background:#FFFDF8;padding:14px 14px 10px;box-shadow:0 10px 24px rgba(90,60,40,.18);transform:rotate(2deg)"><img src="media/cc5db8c56b.jpg" alt="층꽃나무를 찾아온 손님" style="width:520px;height:300px;object-fit:cover"><p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:30px;color:#6E5A4B;text-align:center">층꽃나무를 찾아온 손님</p></div>
+<p style="font-family:Gaegu, 'Noto Sans KR', sans-serif;font-size:42px;line-height:1.4;color:#3E6F4F">눈에 확 띄진 않아도<br>벌을 부르는 건 이 꽃들이에요</p>
+</div></div>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="position:absolute;left:128px;bottom:52px;width:186px;height:46px;object-fit:contain">
+<p style="position:absolute;right:128px;bottom:58px;width:200px;text-align:right;font-size:24px;color:#6E5A4B">11</p>
+
+</section>
+<section id="noweed" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:150px 128px 128px;display:flex;flex-direction:column;align-items:center;gap:28px">
+<p style="font-family:'Great Vibes', cursive;font-size:64px;line-height:1;color:#3E6F4F">Every plant has its color</p>
+<h1 style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:96px;font-weight:400;line-height:1.2;text-align:center">뽑아내야 할 잡초는 없어요</h1>
+<p style="font-size:38px;line-height:1.6;color:#6E5A4B;text-align:center">가치를 찾아 주고, 알아채 주고, 이름을 불러 줄 때<br>작은 풀도 장미보다, 튤립보다 멋진 꽃이 됩니다</p>
+<iframe style="position:absolute;left:0px;top:600px;width:1920px;height:480px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 13, &quot;s&quot;: 1.25, &quot;b&quot;: 2, &quot;f&quot;: 3, &quot;fs&quot;: 1.3, &quot;ground&quot;: 60, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+
+</section>
+<section id="thanks" data-transition="fade" style="background:#FBF4E6;color:#4A372B;font-family:'Noto Sans KR', sans-serif;padding:128px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:24px">
+<p style="font-family:'Great Vibes', cursive;font-size:180px;line-height:1.1;color:#3E6F4F;text-align:center">Thank you</p>
+<p style="font-family:Jua, 'Noto Sans KR', sans-serif;font-size:56px;text-align:center">오늘도 학교에 색깔 한 스푼!</p>
+<img src="media/898c42a77b.png" alt="송례중학교 컬러풀스쿨 로고" style="width:320px;height:80px;object-fit:contain">
+<iframe style="position:absolute;left:0px;top:640px;width:1920px;height:440px;border:0;background:transparent" srcdoc="&lt;!doctype html&gt;&lt;html&gt;&lt;head&gt;&lt;style&gt;html,body{margin:0;height:100%;overflow:hidden;background:transparent}svg{width:100%;height:100%;display:block}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;svg id=&quot;c&quot; data-p=&#x27;{&quot;n&quot;: 13, &quot;s&quot;: 1.25, &quot;b&quot;: 2, &quot;f&quot;: 3, &quot;fs&quot;: 1.3, &quot;ground&quot;: 60, &quot;top&quot;: 0}&#x27; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;&lt;/svg&gt;&lt;script&gt;
+const W=innerWidth,H=innerHeight,C=document.getElementById(&#x27;c&#x27;),P=JSON.parse(C.dataset.p);
+const NS=&#x27;http://www.w3.org/2000/svg&#x27;,mk=(t,a,p)=&gt;{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);(p||C).appendChild(e);return e};
+C.setAttribute(&#x27;viewBox&#x27;,`0 0 ${W} ${H}`);
+const d=mk(&#x27;defs&#x27;,{});const f=mk(&#x27;filter&#x27;,{id:&#x27;s&#x27;,x:&#x27;-20%&#x27;,y:&#x27;-20%&#x27;,width:&#x27;140%&#x27;,height:&#x27;140%&#x27;},d);
+mk(&#x27;feTurbulence&#x27;,{type:&#x27;fractalNoise&#x27;,baseFrequency:&#x27;.035&#x27;,numOctaves:&#x27;2&#x27;,seed:&#x27;3&#x27;},f);mk(&#x27;feDisplacementMap&#x27;,{in:&#x27;SourceGraphic&#x27;,scale:&#x27;5&#x27;},f);
+if(P.ground){const g=mk(&#x27;path&#x27;,{d:`M0 ${H-P.ground} C${W*.3} ${H-P.ground-26} ${W*.6} ${H-P.ground+14} ${W} ${H-P.ground-10} L${W} ${H} L0 ${H}Z`,fill:&#x27;#B8D9A0&#x27;,opacity:.6,filter:&#x27;url(#s)&#x27;});}
+const plants=[],R=(a,b)=&gt;a+Math.random()*(b-a);
+function plant(kind,x,s){const g=mk(&#x27;g&#x27;,{filter:&#x27;url(#s)&#x27;});const by=H-(P.ground?P.ground*.4:4);const h=(kind==1?150:kind==2?190:140)*s;
+ mk(&#x27;path&#x27;,{d:`M0 0 Q-5 ${-h/2} 0 ${-h}`,stroke:&#x27;#76AA72&#x27;,&#x27;stroke-width&#x27;:5*s,fill:&#x27;none&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:-18*s,cy:-h*.35,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(-25 ${-18*s} ${-h*.35})`},g);mk(&#x27;ellipse&#x27;,{cx:18*s,cy:-h*.45,rx:20*s,ry:7*s,fill:&#x27;#94C487&#x27;,transform:`rotate(25 ${18*s} ${-h*.45})`},g);
+ if(kind==0){for(let i=0;i&lt;6;i++)mk(&#x27;ellipse&#x27;,{cx:(i%2?7:-7)*s,cy:-h-i*12*s,rx:13*s,ry:9*s,fill:i%2?&#x27;#9C7CCB&#x27;:&#x27;#B597E0&#x27;},g)}
+ else if(kind==1){[0,.33,.66].forEach((q,i)=&gt;{for(let k=0;k&lt;8;k++)mk(&#x27;circle&#x27;,{cx:Math.cos(k*.8)*(26-i*6)*s,cy:-h*(.4+q*.6)+Math.sin(k*.8)*10*s,r:7*s,fill:k%2?&#x27;#8EA7E3&#x27;:&#x27;#A9B6EE&#x27;},g)})}
+ else{for(let i=0;i&lt;12;i++)mk(&#x27;ellipse&#x27;,{cx:0,cy:-h-22*s,rx:8*s,ry:22*s,fill:&#x27;#FBF0B4&#x27;,stroke:&#x27;#E2CB7A&#x27;,&#x27;stroke-width&#x27;:1.5,transform:`rotate(${i*30} 0 ${-h})`},g);mk(&#x27;circle&#x27;,{cx:0,cy:-h,r:11*s,fill:&#x27;#F3C94F&#x27;},g)}
+ plants.push({g,x,by,ph:R(0,6),sp:R(.7,1.2),amp:R(3,6)})}
+for(let i=0;i&lt;P.n;i++)plant(i%3,(i+.5)*W/P.n+R(-20,20),P.s*R(.8,1.1));
+const fl=[];
+function bee(){const g=mk(&#x27;g&#x27;,{});mk(&#x27;ellipse&#x27;,{cx:-5,cy:-14,rx:10,ry:14,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);mk(&#x27;ellipse&#x27;,{cx:7,cy:-14,rx:9,ry:13,fill:&#x27;#EAF4FB&#x27;,opacity:.85,stroke:&#x27;#B9C9D6&#x27;,class:&#x27;w&#x27;},g);
+ mk(&#x27;ellipse&#x27;,{cx:0,cy:0,rx:19,ry:13,fill:&#x27;#F6CD5B&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:2},g);mk(&#x27;path&#x27;,{d:&#x27;M-5 -12 Q-8 0 -5 12 M5 -12 Q2 0 5 12&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:4,fill:&#x27;none&#x27;},g);return g}
+function bfly(c1,c2){const g=mk(&#x27;g&#x27;,{});const w=mk(&#x27;g&#x27;,{class:&#x27;wing&#x27;},g);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C-26 -34 -46 -6 -26 6 C-40 20 -20 32 0 6Z&#x27;,fill:c1,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 0 C26 -34 46 -6 26 6 C40 20 20 32 0 6Z&#x27;,fill:c2,opacity:.92},w);mk(&#x27;path&#x27;,{d:&#x27;M0 -10 L0 16&#x27;,stroke:&#x27;#6B4B3A&#x27;,&#x27;stroke-width&#x27;:3},g);return g}
+for(let i=0;i&lt;P.b;i++)fl.push({g:bee(),bee:1,ph:R(0,6),sx:R(.15,.3),sy:R(.3,.5),s:P.fs*R(.8,1)});
+const cols=[[&#x27;#F4B5A8&#x27;,&#x27;#F7C9A0&#x27;],[&#x27;#C9B6EE&#x27;,&#x27;#B6C8F2&#x27;],[&#x27;#FBE3A0&#x27;,&#x27;#F6CD8B&#x27;]];
+for(let i=0;i&lt;P.f;i++)fl.push({g:bfly(...cols[i%3]),ph:R(0,6),sx:R(.1,.2),sy:R(.2,.35),s:P.fs*R(.9,1.2)});
+const T0=P.top||0,bot=H-(P.ground?P.ground+30:20);
+function tick(ms){const t=ms/1000;
+ for(const p of plants)p.g.setAttribute(&#x27;transform&#x27;,`translate(${p.x} ${p.by}) rotate(${Math.sin(t*p.sp+p.ph)*p.amp+Math.sin(t*.37+p.ph)*2})`);
+ for(const b of fl){const x=W/2+Math.sin(t*b.sx+b.ph)*W*.42+Math.sin(t*b.sx*2.3+b.ph)*W*.06,y=T0+(bot-T0)*(.5+.4*Math.sin(t*b.sy+b.ph*1.7))+(b.bee?Math.sin(t*9+b.ph)*3:Math.sin(t*2+b.ph)*6);
+  const dx=Math.cos(t*b.sx+b.ph);b.g.setAttribute(&#x27;transform&#x27;,`translate(${x} ${y}) scale(${(dx&lt;0?-1:1)*b.s} ${b.s})`);
+  if(b.bee)b.g.querySelectorAll(&#x27;.w&#x27;).forEach(w=&gt;w.setAttribute(&#x27;opacity&#x27;,.45+.45*Math.abs(Math.sin(t*40))));
+  else b.g.querySelector(&#x27;.wing&#x27;).setAttribute(&#x27;transform&#x27;,`scale(${.35+.65*Math.abs(Math.cos(t*6+b.ph))} 1)`)}
+ requestAnimationFrame(tick)}
+requestAnimationFrame(tick);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+</section>
+</div>
+<div id="ui"><button id="prev">◀</button><span id="num"></span><button id="next">▶</button><button id="fs">전체화면</button></div>
+<script>
+const S=[...document.querySelectorAll('#stage>section')],st=document.getElementById('stage'),v=document.getElementById('intro'),pb=document.getElementById('play');
+let i=Math.max(0,Math.min(S.length-1,(parseInt(location.hash.slice(1))||1)-1));
+function fit(){const k=Math.min(innerWidth/1920,innerHeight/1080);st.style.transform=`translate(-50%,-50%) scale(${k})`}
+function go(n){n=Math.max(0,Math.min(S.length-1,n));S[i].classList.remove('on');if(v&&S[i].contains(v))v.pause();i=n;S[i].classList.add('on');document.getElementById('num').textContent=(i+1)+' / '+S.length;history.replaceState(null,'','#'+(i+1))}
+pb.onclick=e=>{e.stopPropagation();v.play();pb.style.display='none'};
+v.onclick=e=>{e.stopPropagation();v.paused?v.play():v.pause()};
+v.onended=()=>{pb.textContent='↺ 다시 보기';pb.style.display='block'};
+v.onpause=()=>{if(!v.ended){pb.textContent='▶ 이어서 재생';pb.style.display='block'}};
+document.getElementById('prev').onclick=e=>{e.stopPropagation();go(i-1)};
+document.getElementById('next').onclick=e=>{e.stopPropagation();go(i+1)};
+document.getElementById('fs').onclick=e=>{e.stopPropagation();document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()};
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();go(i+1)}else if(['ArrowLeft','PageUp','Backspace'].includes(e.key))go(i-1);else if(e.key=='f')document.getElementById('fs').click();else if(e.key=='Home')go(0);else if(e.key=='End')go(S.length-1)});
+let tx=null;addEventListener('touchstart',e=>tx=e.touches[0].clientX);addEventListener('touchend',e=>{if(tx==null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)go(i+(d<0?1:-1));tx=null});
+addEventListener('hashchange',()=>{const n=(parseInt(location.hash.slice(1))||1)-1;if(n!==i)go(n)});let ht;addEventListener('mousemove',()=>{const u=document.getElementById('ui');u.classList.add('show');clearTimeout(ht);ht=setTimeout(()=>u.classList.remove('show'),2000)});addEventListener('resize',fit);fit();S[i].classList.add('on');go(i);
+</script></body></html>
